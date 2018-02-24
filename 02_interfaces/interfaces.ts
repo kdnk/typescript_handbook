@@ -1,4 +1,9 @@
-function printLabel(labelledObj: { label: string }) {
+// typeとの違いは？
+interface labelledValue {
+  label: string;
+}
+
+function printLabel(labelledObj: labelledValue) {
   console.log(labelledObj.label);
 }
 
