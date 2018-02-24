@@ -13,11 +13,36 @@ class Clock implements ClockInterface {
   constructor(h: number, m: number) {}
 }
 
-interface ClockConstructor {
-  new (hour: number, minute: number);
+// ここからよくわからん
+interface ClockConstructor2 {
+  new (hour: number, minute: number): ClockInterface2;
 }
 
-class Clock2 implements ClockConstructor {
-  currentTime: Date;
-  constructor(h: number, m: number) {}
+interface ClockInterface2 {
+  tick();
 }
+
+function createClock(
+  ctor: ClockConstructor2,
+  hour: number,
+  minute: number
+): ClockInterface2 {
+  return new ctor(hour, minute);
+}
+
+class DigitalClock implements ClockInterface2 {
+  constructor(h: number, m: number) {}
+  tick() {
+    console.log("beep");
+  }
+}
+
+class AnalogClock implements ClockInterface2 {
+  constructor(h: number, m: number) {}
+  tick() {
+    console.log("tick tock");
+  }
+}
+
+let digital = createClock(DigitalClock, 12, 7);
+let analog = createClock(AnalogClock, 12, 7);
