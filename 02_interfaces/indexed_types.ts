@@ -31,8 +31,23 @@ interface Okay {
 }
 
 // dictionary
+// ×
 interface NumericDictionary {
   [index: string]: number;
   length: number;
   name: string;
+}
+
+//これもだめ
+interface NumericDictionary2 {
+  [index: string]: string;
+  length: number;
+  name: string;
+}
+
+// これはok
+interface NumericDictionary3 {
+  [index: string]: number;
+  length: number;
+  name: number;
 }
