@@ -19,3 +19,6 @@ let mySquare = createSquare({ color: "black", width: 100 });
 console.log(mySquare);
 
 let mySquare2 = createSquare({ width: 100, opacity: 0.5 });
+
+let squareOptions = { colour: "red", width: 100 };
+let mySquare3 = createSquare(squareOptions);
