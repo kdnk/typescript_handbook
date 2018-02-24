@@ -29,3 +29,10 @@ interface Okay {
   [x: number]: Dog;
   [x: string]: Animal;
 }
+
+// dictionary
+interface NumericDictionary {
+  [index: string]: number;
+  length: number;
+  name: string;
+}
