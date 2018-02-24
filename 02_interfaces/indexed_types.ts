@@ -23,3 +23,9 @@ interface NotOkay {
   [x: number]: Animal;
   [x: string]: Dog;
 }
+
+// the following is okay.
+interface Okay {
+  [x: number]: Dog;
+  [x: string]: Animal;
+}
