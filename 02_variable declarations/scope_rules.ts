@@ -2,7 +2,6 @@ function f(shouldInitialize: boolean) {
   if (shouldInitialize) {
     var x = 10;
   }
-  console.log(x);
   // console.log(y); --> これはerror
 
   //   /Users/kdnk/kdnk/study/typescript_tutorial/02_variable declarations/scope_rules.js:6
@@ -26,3 +25,33 @@ function f(shouldInitialize: boolean) {
 
 console.log(f(true));
 console.log(f(false));
+
+// i was overrided.
+function sumMatrix(matrix: number[][]) {
+  var sum = 0;
+  for (var i = 0; i < matrix.length; i++) {
+    var currentRow = matrix[i];
+    for (var i = 0; i < currentRow.length; i++) {
+      sum += currentRow[i];
+    }
+  }
+
+  return sum;
+}
+
+sumMatrix([[1, 2], [2, 3]]);
+
+// for (var i = 1; i < 10; i++) {
+//   setTimeout(function() {
+//     console.log(i);
+//   }, i * 100);
+// }
+
+for (var i = 0; i < 10; i++) {
+  // console.log(i);
+  (function(i) {
+    setTimeout(function() {
+      console.log(i);
+    }, 100 * i);
+  })(i);
+}
