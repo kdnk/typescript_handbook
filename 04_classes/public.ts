@@ -9,3 +9,13 @@ class Animal2 {
     console.log(`${this.name} moved ${distanceInMeters}m.`);
   }
 }
+
+// When a member is marked private, it cannot be accessed from outside of its containing class.
+class Animal3 {
+  private name: string;
+  public constructor(theName: string) {
+    this.name = theName;
+  }
+}
+
+new Animal3("Cat").name;
