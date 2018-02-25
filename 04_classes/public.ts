@@ -27,9 +27,30 @@ class Animal4 {
   }
 }
 
+class Animal5 {
+  protected name: string;
+  constructor(theName: string) {
+    this.name = theName;
+  }
+}
+
 class Rhino extends Animal4 {
   constructor() {
     super("Rhino");
+  }
+
+  public hello() {
+    console.log(`My name is ${this.name}`); // Property 'name' is private and only accessible within class 'Animal4'.
+  }
+}
+
+class Rhino2 extends Animal5 {
+  constructor() {
+    super("Rhino2");
+  }
+
+  public hello() {
+    console.log(`My name is ${this.name}`); // it's okay because name is protected member
   }
 }
 
