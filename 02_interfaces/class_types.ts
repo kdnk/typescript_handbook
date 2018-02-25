@@ -13,7 +13,7 @@ class Clock implements ClockInterface {
   constructor(h: number, m: number) {}
 }
 
-// ここからよくわからん
+// TODO: ここからよくわからん
 interface ClockConstructor2 {
   new (hour: number, minute: number): ClockInterface2;
 }
