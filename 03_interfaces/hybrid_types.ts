@@ -5,6 +5,10 @@ interface Counter {
 }
 
 function getCounter(): Counter {
+  let counter = <Counter>function(start: number);
+}
+
+function getCounter(): Counter {
   let counter = <Counter>function(start: number) {};
   counter.interval = 124;
   counter.reset = function() {};
