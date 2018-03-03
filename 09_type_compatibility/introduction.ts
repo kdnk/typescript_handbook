@@ -2,10 +2,14 @@ interface Named {
   name: string;
 }
 
-class Person {
-  name: string;
+let x: Named;
+
+let y = { name: "Alice", location: "Seattle" };
+
+x = y;
+
+function great(x: Named) {
+  console.log("Hello " + x.name);
 }
 
-let p: Named;
-
-p = new Person();
+great(y);
