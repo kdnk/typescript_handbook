@@ -15,24 +15,24 @@ padLeft("Hello world", 4);
 // console.log(padLeft("Hello world", true)); // => error
 console.log(padLeft("Hello world", 4));
 
-interface Bird {
-  fly();
-  layEggs();
-}
+// interface Bird {
+//   fly();
+//   layEggs();
+// }
 
-interface Fish {
-  swim();
-  layEggs();
-}
+// interface Fish {
+//   swim();
+//   layEggs();
+// }
 
-function getSmallPet(): Fish | Bird {
-  let a = true;
-  if (a) {
-    return { fly: () => {}, layEggs: () => {} };
-  } else {
-    return { swim: () => {}, layEggs: () => {} };
-  }
-}
+// function getSmallPet(): Fish | Bird {
+//   let a = true;
+//   if (a) {
+//     return { fly: () => {}, layEggs: () => {} };
+//   } else {
+//     return { swim: () => {}, layEggs: () => {} };
+//   }
+// }
 
-let pet = getSmallPet();
-pet.layEggs();
+// let pet = getSmallPet();
+// pet.layEggs();
