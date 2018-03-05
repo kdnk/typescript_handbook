@@ -14,12 +14,14 @@ function extend(first, second) {
     }
     return result;
 }
+
 var Person1 = /** @class */ (function () {
     function Person1(name) {
         this.name = name;
     }
     return Person1;
 }());
+
 var ConsoleLogger = /** @class */ (function () {
     function ConsoleLogger() {
     }
