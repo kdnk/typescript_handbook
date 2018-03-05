@@ -26,7 +26,6 @@ listenEvent(EventType.Mouse, (e: MouseEvent) => {
   console.log(e.x + ", " + e.y);
 });
 
-listenEvent(EventType.Mouse. (e: number) => {
+listenEvent(EventType.Mouse, (e: number) => {
   console.log(e);
-
-})
+});
