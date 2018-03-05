@@ -13,7 +13,17 @@ interface Circle2 {
   radius: number;
 }
 
-type Shape2 = Square2 | Rectangle | Circle2;
+interface Triangle {
+  kind: "triangle";
+  width: number;
+  height: number;
+}
+
+type Shape2 = Square2 | Rectangle | Circle2 | Triangle;
+
+function assertNever(x: never): never {
+  throw new Error("Unexpected object: " + x);
+}
 
 function area(s: Shape2) {
   switch (s.kind) {
@@ -23,5 +33,7 @@ function area(s: Shape2) {
       return s.height * s.width;
     case "circle":
       return Math.PI * s.radius ** 2;
+    default:
+      return assertNever(s);
   }
 }
