@@ -9,7 +9,3 @@ class UIElement {
     }
   }
 }
-
-let button = new UIElement();
-button.animate(0, 0, "ease-in");
-button.animate(0, 0, "uneasy");
