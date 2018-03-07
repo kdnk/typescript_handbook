@@ -9,3 +9,11 @@ class UIElement {
     }
   }
 }
+
+let button = new UIElement();
+button.animate(0, 0, "ease-in");
+button.animate(0, 0, "uneasy");
+
+function createElement(tagName: "img"): HTMLImageElement;
+function createElement(tagName: "input"): HTMLImageElement;
+function createElement(tagName: string): Element {}
